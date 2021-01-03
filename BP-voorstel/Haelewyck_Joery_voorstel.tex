@@ -1,71 +1,30 @@
-%==============================================================================
-% Sjabloon onderzoeksvoorstel bachelorproef
-%==============================================================================
-% Gebaseerd op LaTeX-sjabloon ‘Stylish Article’ (zie voorstel.cls)
-% Auteur: Jens Buysse, Bert Van Vreckem
-%
-% Compileren in TeXstudio:
-%
-% - Zorg dat Biber de bibliografie compileert (en niet Biblatex)
-%   Options > Configure > Build > Default Bibliography Tool: "txs:///biber"
-% - F5 om te compileren en het resultaat te bekijken.
-% - Als de bibliografie niet zichtbaar is, probeer dan F5 - F8 - F5
-%   Met F8 compileer je de bibliografie apart.
-%
-% Als je JabRef gebruikt voor het bijhouden van de bibliografie, zorg dan
-% dat je in ``biblatex''-modus opslaat: File > Switch to BibLaTeX mode.
 
 \documentclass{voorstel}
 
 \usepackage{lipsum}
-
+\bibliography{voorstel.bib}
 %------------------------------------------------------------------------------
 % Metadata over het voorstel
 %------------------------------------------------------------------------------
 
 %---------- Titel & auteur ----------------------------------------------------
 
-% TODO: geef werktitel van je eigen voorstel op
-\PaperTitle{Titel voorstel}
+\PaperTitle{De impact van de transformatie van monolithische systemen naar microservices}
 \PaperType{Onderzoeksvoorstel Bachelorproef 2020-2021} % Type document
 
-% TODO: vul je eigen naam in als auteur, geef ook je emailadres mee!
 \Authors{Joery Haelewyck\textsuperscript{1}} % Authors
-\CoPromotor{Piet Pieters\textsuperscript{2} (Bedrijfsnaam)}
+\CoPromotor{Yentl Verhelst\textsuperscript{2} (TUI), Alexander Sels\textsuperscript{3} (Liantis)}
 \affiliation{\textbf{Contact:}
   \textsuperscript{1} \href{mailto:joery.haelewyck.w4357@student.hogent.be}{joery.haelewyck.w4357@student.hogent.be};
-  \textsuperscript{2} \href{mailto:piet.pieters@acme.be}{piet.pieters@acme.be};
+  \textsuperscript{2} \href{mailto:yentl.verhelst@tui.be}{yentl.verhelst@tui.be};
+  \textsuperscript{3}
+  \href{mailto:alexandersels@hotmail.com}{alexandersels@hotmail.com}
 }
 
-%---------- Abstract ----------------------------------------------------------
+\Abstract{In dit onderzoek wordt gezocht naar de precieze impact van de transformatie van een monolithische software architectuur naar een systeem bestaande uit microservices. Om een schatting te maken van hoe groot of klein deze impact kan zijn, zal eerst onderzocht worden hoe een dergelijke transformatie precies verloopt. Naarmate het onderzoek vordert en meer kennis en inzicht verworven wordt omtrent deze architecturen, zal het financiële aspect, de performantie en het sociale facet omtrent de transformatie geanalyseerd worden.
+Microservices zitten in de lift en steeds meer bedrijven maken gebruik van dit concept. Het is dan ook van uiterst belang om te begrijpen wat de voor- en nadelen van deze architectuur zijn.}
 
-\Abstract{Hier schrijf je de samenvatting van je voorstel, als een doorlopende tekst van één paragraaf. Wat hier zeker in moet vermeld worden: \textbf{Context} (Waarom is dit werk belangrijk?); \textbf{Nood} (Waarom moet dit onderzocht worden?); \textbf{Taak} (Wat ga je (ongeveer) doen?); \textbf{Object} (Wat staat in dit document geschreven?); \textbf{Resultaat} (Wat verwacht je van je onderzoek?); \textbf{Conclusie} (Wat verwacht je van van de conclusies?); \textbf{Perspectief} (Wat zegt de toekomst voor dit werk?).
-
-Bij de sleutelwoorden geef je het onderzoeksdomein, samen met andere sleutelwoorden die je werk beschrijven.
-
-Vergeet ook niet je co-promotor op te geven.
-}
-
-%---------- Onderzoeksdomein en sleutelwoorden --------------------------------
-% TODO: Sleutelwoorden:
-%
-% Het eerste sleutelwoord beschrijft het onderzoeksdomein. Je kan kiezen uit
-% deze lijst:
-%
-% - Mobiele applicatieontwikkeling
-% - Webapplicatieontwikkeling
-% - Applicatieontwikkeling (andere)
-% - Systeembeheer
-% - Netwerkbeheer
-% - Mainframe
-% - E-business
-% - Databanken en big data
-% - Machineleertechnieken en kunstmatige intelligentie
-% - Andere (specifieer)
-%
-% De andere sleutelwoorden zijn vrij te kiezen
-
-\Keywords{Onderzoeksdomein. Keyword1 --- Keyword2 --- Keyword3} % Keywords
+\Keywords{Software-architectuur. microservice --- monoliet --- transformatie} % Keywords
 \newcommand{\keywordname}{Sleutelwoorden} % Defines the keywords heading name
 
 %---------- Titel, inhoud -----------------------------------------------------
@@ -88,11 +47,9 @@ Vergeet ook niet je co-promotor op te geven.
 %------------------------------------------------------------------------------
 % Referentielijst
 %------------------------------------------------------------------------------
-% TODO: de gerefereerde werken moeten in BibTeX-bestand ``voorstel.bib''
 % voorkomen. Gebruik JabRef om je bibliografie bij te houden en vergeet niet
 % om compatibiliteit met Biber/BibLaTeX aan te zetten (File > Switch to
 % BibLaTeX mode)
-
 \phantomsection
 \printbibliography[heading=bibintoc]
 

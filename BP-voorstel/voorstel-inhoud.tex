@@ -3,49 +3,66 @@
 \section{Introductie} % The \section*{} command stops section numbering
 \label{sec:introductie}
 
-Hier introduceer je werk. Je hoeft hier nog niet te technisch te gaan.
+%Hier introduceer je werk. Je hoeft hier nog niet te technisch te gaan.
 
-Je beschrijft zeker:
+%Je beschrijft zeker:
 
-\begin{itemize}
-  \item de probleemstelling en context
-  \item de motivatie en relevantie voor het onderzoek
-  \item de doelstelling en onderzoeksvraag/-vragen
-\end{itemize}
+%\begin{itemize}
+  %\item de probleemstelling en context
+  %\item de motivatie en relevantie voor het onderzoek
+  %\item de doelstelling en onderzoeksvraag/-vragen
+%\end{itemize}
+
+De term 'Microservices' werd voor het eerst gebruikt in een evenement voor software architecten in 2011.
+Deze benaming beschrijft een stijl van architectuur, die in die tijd nog in de kinderschoenen stond. Amazon en Netflix waren de pioniers van deze stijl. Deze vorm van architectuur wordt elk jaar populairder dankzij haar flexibiliteit.\\
+Monolithische systemen zijn grote en vaak complexe gehelen die onderling met elkaar verbonden zijn. Deze structuur vertegenwoordigd nog altijd het merendeel van de bedrijfssystemen. Hiervoor wordt meestal niet bewust gekozen maar is het resultaat van beslissingen op bedrijfsniveau.\\
+Oudere bedrijven ondervinden steeds vaker de limieten van de monolithische systemen waardoor ze willen overschakelen naar de flexibelere microservices. Maar is dit wel altijd de juiste keuze? Is er wel genoeg kennis om deze overstap te maken? Hoe lang zal de transformatie duren? Is er genoeg budget? Kortom er zijn heel wat vragen die beantwoord moeten worden.
+  
+
+ 
 
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{State-of-the-art}
 \label{sec:state-of-the-art}
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein. Dit kan bijvoorbeeld een literatuurstudie zijn. Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek? Wat is de relevantie met jouw onderzoek?
+\subsection{Monolitische systemen}
+Een monolithisch systeem is een architecturale stijl of een softwareontwikkelingspatroon. Vaak zijn het grote en complexe systemen die alle functionaliteit bevatten om aan de noden van de business te voldoen. De logheid is historisch gegroeid: door wijzigingen op wijzigingen. Hierdoor is het moeilijker te onderhouden en vatbaar voor fouten.
+~\autocite{Monolith2014}
 
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Doll1954}! Denk zeker goed na welke werken je refereert en waarom.
-
-% Voor literatuurverwijzingen zijn er twee belangrijke commando's:
-% \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
-%   geen onderdeel is van de zin.
-% \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
-%   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
-%   ...'')
-
-Je mag gerust gebruik maken van subsecties in dit onderdeel.
+\subsection{Microservices}
+Een microservice is een enkele applicatie die bestaat uit een reeks kleine services, die elk hun eigen proces draaien. Deze processen communiceren met 'light-weight' mechanismen, hoofdzakelijk een API. De services zijn onafhankelijk bruikbaar door volledig geautomatiseerde implementatiemachines. 
+~\autocite{Microservices2014}
 
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor experimenten, vragenlijsten, simulaties? Je beschrijft ook al welke tools je denkt hiervoor te gebruiken of te ontwikkelen.
+Als eerste stap zal er een grondige literatuurstudie uitgevoerd worden. In deze studie zal elk aspect van microservices en monolithische systemen behandeld worden.  
+Indien er te weinig informatie uit de literatuurstudie gepuurd wordt, zal er een enquête afgenomen worden bij bedrijven die een dergelijke transformatie achter de rug hebben of er volop mee bezig zijn.\\
+Aan de hand van de opgedane kennis wordt er een grondig vergelijking uitgevoerd tussen de twee architecturen. Vervolgens wordt er een model opgesteld die gebruikt kan worden om een inschatting te maken over alle mogelijke gevolgen van een transformatie van een monolithische structuur naar een systeem bestaande uit microservices. Het model zal informatie bevatten over volgende criteria:
+\begin{itemize}
+    \item duur
+    \item financiële aspect
+    \item vereiste kennis
+    \item haalbaarheid
+    \item schaalbaarheid
+    \item beschikbaarheid
+    \item ROI
+\end{itemize} 
+Tenslotte zal het opgestelde model getest worden in verschillend scenario’s waarbij een conclusie genoteerd wordt.
 
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwachte resultaten}
 \label{sec:verwachte_resultaten}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de stukken van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet hoe je je data gaat moeten structureren.
+De verwachte resultaten hangen hoofdzakelijk af van de grootte van het bestaande systeem. Hoe groter de monoliet, hoe meer microservices er nodig zullen zijn. Dit geldt voor de meeste criteria die onderzocht zullen worden.\\
+De duur van de transformatie hangt af van de grootte en de complexiteit. Diep in elkaar geneste programma's zullen meer tijd nodig hebben.\\
+De kostprijs zal beïnvloed worden door verschillende factoren. Als er intern niet genoeg kennis aanwezig is, dan zal het bedrijf externe krachten moeten aanwerven. Een andere mogelijkheid is om te investeren in het huidige personeel. Ondertussen moet ook het bestaande systeem onderhouden worden.
 
 %---------- Verwachte conclusies ----------------------------------------------
 \section{Verwachte conclusies}
 \label{sec:verwachte_conclusies}
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
+Dit onderzoek zou een verduidelijking moeten geven op de impact van de transformatie van een monolithische systeem naar microservices. Op papier hebben microservices de meeste voordelen ten opzichte van de monolieten, maar deze voordelen zullen niet in iedere situatie opwegen tegen de kosten van de transformatie. Kleinere systemen zullen minder voordeel halen uit het feit dat elke functionaliteit van hun systeem geïsoleerd is. 
+Hopelijk kan er een model opgesteld worden die kan voorspellen voor welke situatie de beste architectuur is.
 
