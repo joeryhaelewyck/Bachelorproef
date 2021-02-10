@@ -1,0 +1,68 @@
+<Flows>
+        <Flow name="/getflights">
+            <Description>Gets all available flights with departure date greater or equal to today</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/getflights") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="/luggage">
+            <Description>Gets luggage values/possibilities for out and return flight.</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/luggage") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="/includedluggage">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/includedluggage") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="/flightavailability">
+            <Description>Returns the flights that are available for the given parameters.</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/flightavailability") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="/pricecalculation">
+            <Description>Returns the price of the given booking</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/pricecalculation") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="/bookinfo">
+            <Description>Return information about the requested booking</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/bookinfo") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="/mail">
+            <Description>Returns the body of the mail or sends a mail</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/mail") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="/pay">
+            <Description>Confirms and pays the given booking</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/getflights") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="/cancelbook">
+            <Description>Cancels the given booking</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/cancelbook") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="/confirmdomiciliation">
+            <Description>Returns the status of the domiciliation</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/confirmdomiciliation") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="/bookingslist">
+            <Description>Returns all the bookings associated with the given OTA</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/bookingslist") and (request.verb = "GET")</Condition>
+        </Flow>
+    </Flows>
